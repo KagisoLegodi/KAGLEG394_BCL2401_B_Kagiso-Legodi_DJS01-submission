@@ -25,6 +25,10 @@ if (velocity.unit !== 'km/h' || acceleration.unit !== 'm/s^2' || duration.unit !
 const velocityInMeterPerSecond = velocity.value / 3.6;
 const intialDistanceInMeters = intialDistance.value * 1000;
 
+// Calculate new distance
+const newDistanceInMeters = intialDistanceInMeters +  (velocityInmetersPerSecond * duration.value);
+const newDistanceInKilometers = newDistanceInMeters / 1000;
+
 // Pick up an error with how the function below is called and make it robust to such errors
 calcNewVel = (vel, acc, time) => { 
   return vel + (acc*time)
