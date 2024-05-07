@@ -16,6 +16,11 @@ const calcNewVelelocity = (acceleration, velocity, duration) => {
   const calcNewVelelocity = velocity + (acceleration * duration);
   return calcNewVelelocity;
 }
+
+// Validate input parameters
+if (velocity.unit !== 'km/h' || acceleration.unit !== 'm/s^2' || duration.unit !== 's' || intialDistance.unit !== 'km' || fuelAmount.unit !== 'kg' || fuelBurnRate.unit !== 'kg/s'){
+  throw new Error ('Invalid unit of measurement for one or more input parameters');
+}
 const d2 = d + (vel*time) //calcultes new distance
 const rf = fbr*time //calculates remaining fuel
 const vel2 = calcNewVel(acc, vel, time) //calculates new velocity based on acceleration
