@@ -21,9 +21,9 @@ const calcNewVelelocity = (acceleration, velocity, duration) => {
 if (velocity.unit !== 'km/h' || acceleration.unit !== 'm/s^2' || duration.unit !== 's' || intialDistance.unit !== 'km' || fuelAmount.unit !== 'kg' || fuelBurnRate.unit !== 'kg/s'){
   throw new Error ('Invalid unit of measurement for one or more input parameters');
 }
-const d2 = d + (vel*time) //calcultes new distance
-const rf = fbr*time //calculates remaining fuel
-const vel2 = calcNewVel(acc, vel, time) //calculates new velocity based on acceleration
+// Convert units to a common unit (m/s, m, kg)
+const velocityInMeterPerSecond = velocity.value / 3.6;
+const intialDistanceInMeters = intialDistance.value * 1000;
 
 // Pick up an error with how the function below is called and make it robust to such errors
 calcNewVel = (vel, acc, time) => { 
