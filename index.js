@@ -31,14 +31,15 @@ const newDistanceInKilometers = newDistanceInMeters / 1000;
 
 // Calculate remaining fuel 
 const remainingFuelInKilograms = fuelAmount.value - (fuelBurnRate.value * duration.value);
+
 // Pick up an error with how the function below is called and make it robust to such errors
 calcNewVel = (vel, acc, time) => { 
   return vel + (acc*time)
 }
 
-console.log(`Corrected New Velocity: ${vel2} km/h`);
-console.log(`Corrected New Distance: ${d2} km`);
-console.log(`Corrected Remaining Fuel: ${rf} kg`);
+console.log('Corrected New Velocity: ${newVelocityInKilometersPerHour} km/h');
+console.log('Corrected New Distance: ${newDistanceInKilometers} km');
+console.log('Corrected Remaining Fuel: ${remainingFuelInKilograms} kg');
 
 
 
