@@ -1,46 +1,49 @@
-### DJS01: Mars Climate Orbiter Challenge
+# Spacecraft Simulation README
 
-The Mars Climate Orbiter incident in 1999 is a stark reminder of the importance of precision in space missions, highlighting how a simple unit mismatch led to the loss of the spacecraft. This challenge seeks to simulate similar challenges in a spacecraft navigation system, emphasising the need for accuracy in calculations.
+## Introduction
 
-#### Challenge Overview
+Welcome to the Spacecraft Simulation project README. This project aims to simulate the behavior of a spacecraft over a period of time, considering factors such as velocity, acceleration, distance, and fuel consumption. The simulation is performed using JavaScript code.
 
-This challenge invites students to debug, refactor, and enhance JavaScript functions designed for determining the trajectory of a spacecraft. The initial functions are flawed and may result in incorrect calculations.
+## Struggles
 
-![alt text](mars.gif)
+### 1. Handling Units and Conversions
+One of the main struggles was handling different units for parameters such as velocity, acceleration, and duration. Ensuring that all calculations were performed using consistent units posed a challenge.
 
-##### Problem Areas to Address
+### 2. Error Handling
+Implementing robust error handling to deal with invalid input parameters and unit mismatches was another challenge. It required careful consideration to ensure the code could gracefully handle errors without crashing.
 
-1. **Unit Mismatch**: The provided functions fail to convert units correctly, leading to calculation inaccuracies.
-2. **Parameter Misalignment**: Parameters are not handled in a way that prevents or highlights the potential for unit mismatch errors, leading to possible confusion.
+### 3. Understanding the Requirements
+Understanding the requirements thoroughly and ensuring that the code met all the specified criteria was a key struggle. It required careful reading and interpretation of the given parameters and expected corrected results.
 
-##### Initial Parameters
+## Lessons Learned
 
-- **Initial Velocity (`vel`)**: The starting speed of the spacecraft, 10,000 km/h.
-- **Acceleration (`acc`)**: The spacecraft's acceleration, 3 m/s².
-- **Time (`time`)**: The duration of the calculation, 3,600 seconds (equivalent to 1 hour).
-- **Initial Distance (`d`)**: The starting distance from the reference point, 0 km.
-- **Initial Fuel (`fuel`)**: The starting amount of fuel, 5,000 kg.
-- **Fuel Burn Rate (`fbr`)**: The rate at which fuel is consumed, 0.5 kg/s.
+### 1. Importance of Unit Consistency
+This project highlighted the importance of unit consistency in calculations. It taught me the significance of converting all parameters to a common unit before performing any mathematical operations to ensure accurate results.
 
-##### Expected Corrected Results
+### 2. Error Handling Best Practices
+Implementing robust error handling mechanisms taught me the importance of anticipating potential issues and providing clear error messages to aid debugging and troubleshooting.
 
-- **New Velocity**: Approximately 48880 km/h after correction.
-- **New Distance**: Approximately 10000 km after correction.
-- **Remaining Fuel**: Approximately 3,200 kg after correction.
+### 3. Clear Communication
+Clear communication of requirements and expectations is crucial for successful project completion. It's essential to clarify any ambiguities upfront and ensure alignment between stakeholders.
 
-#### Your Task
+## Goals
 
-1. **Identify and Understand Errors**: Analyse the provided functions to determine how unit mismatches and parameter misalignments cause incorrect results.
-2. **Refactor and Correct**: Modify the functions to handle parameters more effectively, incorporating object destructuring for clarity and implementing necessary unit conversions.
+### 1. Implement Accurate Calculations
+The primary goal was to implement accurate calculations for velocity, distance, and remaining fuel consumption based on the provided parameters and expected corrected results.
 
-#### Solution Approach
+### 2. Ensure Code Robustness
+Another goal was to ensure the code's robustness by implementing comprehensive error handling mechanisms to handle invalid input parameters and unit mismatches gracefully.
 
-- Use object destructuring in function parameters for better clarity.
-- Implement accurate unit conversions within the functions.
-- Ensure the corrected functions address the issues of unit mismatches and parameter clarity.
+### 3. Meet Project Requirements
+Meeting all the specified project requirements, including unit conversions, error handling, and calculation accuracy, was a fundamental goal to achieve successful project completion.
 
-#### Debugging Guide
+## Goals Met
 
-1. Enhance code readability for easier debugging.
-2. Identify and correct calculation errors.
-3. Improve the robustness of calculations. If incorrect units are used or other errors are detected, the code should notify the user instead of producing an incorrect result.
+### 1. Accurate Calculations Implemented
+The code successfully implements accurate calculations for velocity, distance, and remaining fuel consumption based on the provided parameters. The calculated results match the expected corrected results.
+
+### 2. Robust Error Handling Implemented
+Comprehensive error handling mechanisms have been implemented to handle invalid input parameters and unit mismatches gracefully. Clear error messages are provided to aid debugging and troubleshooting.
+
+### 3. Project Requirements Met
+All the specified project requirements, including unit conversions, error handling, and calculation accuracy, have been successfully met. The code aligns with the provided guidelines and produces the expected results.
